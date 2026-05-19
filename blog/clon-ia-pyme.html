@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo un clon de IA multiplicó por 3 la generación de contenido — Axia & Co</title>
+  <meta name="description" content="Caso real: creamos el avatar de IA de un CEO en una tarde de grabación. Resultado: ×3 en contenido producido y −95% del tiempo dedicado por el fundador." />
+  <link rel="canonical" href="https://axia.co/blog/clon-ia-pyme.html" />
+  <meta property="og:title" content="Cómo un clon de IA multiplicó por 3 la generación de contenido de una pyme" />
+  <meta property="og:description" content="Grabamos una tarde. Ahora su versión digital genera contenido todos los días." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" />
+  <meta property="og:type" content="article" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #08091A; --bg2: #0D0E26; --txt: #EFEFEF; --txt2: #5A5B7A; --txt3: #2E2F4A;
+      --blue: #5162E8; --blue2: #6B7CF0; --border: rgba(255,255,255,0.07); --font: 'Inter', sans-serif;
+    }
+    body { background: var(--bg); color: var(--txt); font-family: var(--font); font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(8,9,26,.94); backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo img { height: 34px; }
+    .nav-back { font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--txt2); display: flex; align-items: center; gap: .5rem; transition: color .2s; }
+    .nav-back:hover { color: var(--txt); }
+    .article-hero { padding-top: 100px; height: 60vh; min-height: 420px; position: relative; overflow: hidden; }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.35); }
+    .article-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg) 0%, transparent 60%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 4rem; }
+    .article-cat { font-size: .62rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--blue2); margin-bottom: 1rem; }
+    .article-title { font-size: clamp(1.8rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; max-width: 20ch; }
+    .article-meta { display: flex; align-items: center; gap: 2rem; margin-top: 1.2rem; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt2); }
+    .article-body { max-width: 720px; margin: 0 auto; padding: 5rem 2rem 8rem; }
+    .article-lead { font-size: 1.15rem; font-weight: 400; color: var(--txt); line-height: 1.75; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .article-body h2 { font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; margin: 3rem 0 1.2rem; color: var(--txt); }
+    .article-body h3 { font-size: 1.05rem; font-weight: 600; margin: 2rem 0 .8rem; color: var(--blue2); }
+    .article-body p { font-size: .9rem; color: var(--txt2); line-height: 1.85; margin-bottom: 1.2rem; }
+    .article-body strong { color: var(--txt); font-weight: 600; }
+    .callout { background: var(--bg2); border-left: 3px solid var(--blue); padding: 1.5rem 2rem; margin: 2.5rem 0; font-size: .88rem; color: var(--txt); line-height: 1.7; font-style: italic; }
+    .steps { list-style: none; margin: 2.5rem 0; counter-reset: step; }
+    .step { display: flex; gap: 2rem; padding: 1.8rem 0; border-bottom: 1px solid var(--border); }
+    .step:first-child { border-top: 1px solid var(--border); }
+    .step-num { font-size: 2.5rem; font-weight: 100; color: var(--txt3); line-height: 1; flex-shrink: 0; min-width: 50px; }
+    .step-content strong { font-size: .9rem; font-weight: 700; color: var(--txt); display: block; margin-bottom: .5rem; }
+    .step-content p { font-size: .82rem; color: var(--txt2); line-height: 1.7; margin: 0; }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin: 2.5rem 0; }
+    .stat-box { background: var(--bg2); padding: 1.8rem; }
+    .stat-box .val { font-size: 2rem; font-weight: 200; letter-spacing: -.04em; color: var(--txt); }
+    .stat-box .lbl { font-size: .6rem; letter-spacing: .15em; text-transform: uppercase; color: var(--txt2); margin-top: .3rem; }
+    .article-cta { margin-top: 5rem; padding: 3rem; background: var(--bg2); border: 1px solid rgba(81,98,232,.2); text-align: center; }
+    .article-cta p { font-size: .88rem; color: var(--txt2); margin-bottom: 1.5rem; }
+    .article-cta a { display: inline-flex; align-items: center; gap: .75rem; background: var(--blue); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 1rem 2rem; transition: opacity .2s; }
+    .article-cta a:hover { opacity: .88; }
+    @media (max-width: 768px) {
+      nav { padding: 1.1rem 1.5rem; }
+      .article-hero-content { padding: 2rem 1.5rem; }
+      .article-body { padding: 3rem 1.5rem 5rem; }
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo" style="font-size:.82rem;font-weight:900;letter-spacing:.2em;color:#F2F2F4;">AXIA <span style="color:#5162E8;">&</span> CO</a>
+  <a href="../index.html#blog" class="nav-back">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Volver al blog
+  </a>
+</nav>
+
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=1400&q=85&auto=format&fit=crop" alt="Inteligencia Artificial" />
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-cat">IA Aplicada · Caso real</div>
+    <h1 class="article-title">Cómo un clon de IA multiplicó por 3 la generación de contenido de una pyme</h1>
+    <div class="article-meta">
+      <span>Axia & Co</span>
+      <span>6 min lectura</span>
+      <span>Febrero 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p class="article-lead">
+    Grabamos una tarde con el CEO de una empresa de catering. Cinco horas de sesión, un guión preparado y un equipo de producción. Hoy, su versión digital genera vídeos de contenido todos los días sin que él tenga que hacer nada. Los resultados nos sorprendieron incluso a nosotros.
+  </p>
+
+  <h2>El problema que queríamos resolver</h2>
+  <p>El CEO en cuestión era la cara visible del negocio. Carismático, con criterio y con algo que decir. El problema es que su agenda no le dejaba tiempo para crear contenido de forma consistente. En el mejor de los casos, grababa un vídeo a la semana. La mayoría de las semanas, ninguno.</p>
+  <p>La presencia en redes era intermitente, la comunidad no crecía y el equipo de marketing dependía constantemente de su disponibilidad para producir cualquier pieza con su cara. Era un cuello de botella claro.</p>
+
+  <div class="callout">
+    "No es que no quiera crear contenido. Es que no tengo tiempo. Y si no soy yo quien aparece, la marca pierde autenticidad."
+  </div>
+
+  <h2>La solución: un clon de IA entrenado con su voz y personalidad</h2>
+  <p>La tecnología de avatares de IA ha madurado enormemente en los últimos 18 meses. Ya no estamos hablando de vídeos con aspecto sintético que nadie creería real. Estamos hablando de representaciones digitales que mantienen la voz, los gestos habituales, el tono y el ritmo de habla de una persona real.</p>
+  <p>El proceso que seguimos tiene tres fases:</p>
+
+  <ul class="steps">
+    <li class="step">
+      <span class="step-num">01</span>
+      <div class="step-content">
+        <strong>Sesión de grabación in-situ</strong>
+        <p>Nos desplazamos al negocio con nuestro equipo de producción. Grabamos al CEO durante 5 horas siguiendo un guión estructurado que cubre distintos tonos, expresiones, pausas y gestos. También grabamos su voz en diferentes registros: explicativo, persuasivo, cercano, formal. Este material es la materia prima del clon.</p>
+      </div>
+    </li>
+    <li class="step">
+      <span class="step-num">02</span>
+      <div class="step-content">
+        <strong>Entrenamiento y calibración del modelo</strong>
+        <p>Con el material grabado, entrenamos el avatar de IA usando las plataformas más avanzadas del mercado. La calibración es el proceso más delicado: ajustamos el sincronismo labial, la naturalidad de los movimientos y la coherencia del tono de voz. El resultado es revisado y validado por el propio CEO antes de producir ningún contenido.</p>
+      </div>
+    </li>
+    <li class="step">
+      <span class="step-num">03</span>
+      <div class="step-content">
+        <strong>Sistema de producción de contenido</strong>
+        <p>Una vez el clon está validado, el equipo de estrategia escribe los guiones de contenido según el calendario editorial. Los guiones se cargan en el sistema y el avatar genera el vídeo en minutos. El equipo revisa, edita mínimamente y publica. Sin necesidad de que el CEO esté presente.</p>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Los resultados a los 60 días</h2>
+  <p>Pasamos de publicar 3–4 vídeos al mes a publicar entre 12 y 15 — manteniendo la misma coherencia de marca, el mismo tono y la misma cara. El tiempo dedicado por el CEO bajó de aproximadamente 6 horas mensuales de grabación a una revisión mensual de 30 minutos para validar el contenido del mes siguiente.</p>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="val">×3</div><div class="lbl">Volumen de contenido producido</div></div>
+    <div class="stat-box"><div class="val">−95%</div><div class="lbl">Tiempo dedicado por el CEO</div></div>
+    <div class="stat-box"><div class="val">+68%</div><div class="lbl">Engagement en Instagram</div></div>
+  </div>
+
+  <h3>¿Y la autenticidad?</h3>
+  <p>Esta es la pregunta que más nos hacen. La respuesta honesta es: <strong>el nivel de autenticidad depende de la calidad del guión</strong>. Si el contenido que escribe el equipo refleja la forma de pensar y comunicar del CEO, el resultado es completamente creíble. Si el guión es genérico, se nota.</p>
+  <p>En este caso, el propio CEO revisó y ajustó los primeros 10 guiones hasta que el equipo aprendió su voz. A partir del guión 11, las revisiones fueron mínimas.</p>
+
+  <h3>¿Esto es ético?</h3>
+  <p>Sí, con condiciones. El uso del clon siempre está limitado al contenido validado por el titular. No se utiliza para responder preguntas en tiempo real, declaraciones comprometidas ni ningún contexto donde la presencia física o el juicio en tiempo real del CEO sea necesario. Es una herramienta de producción de contenido, no un sustituto de la persona.</p>
+
+  <div class="callout">
+    La IA no reemplaza a la persona. Amplifica su capacidad de estar presente donde antes no podía estarlo.
+  </div>
+
+  <h2>¿Para quién tiene sentido este servicio?</h2>
+  <p>Para cualquier fundador, CEO o cara visible de un negocio que tenga algo valioso que decir pero no tenga tiempo de decirlo con la frecuencia necesaria. El servicio tiene más impacto en negocios donde la persona es parte de la marca — consultores, empresas de servicios, negocios locales con fuerte identidad personal.</p>
+  <p>Si tu negocio es completamente impersonal o no tienes ninguna figura reconocible, este servicio probablemente no sea la prioridad. Pero si la hay, el potencial de amplificación es enorme.</p>
+
+  <div class="article-cta">
+    <p>¿Quieres explorar si un clon de IA tiene sentido para tu negocio?</p>
+    <a href="../index.html#contacto">
+      Hablemos en una sesión gratuita
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+</div>
+</body>
+</html>

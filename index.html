@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Axia & Co | Growth Partner — Sistemas de Crecimiento para Empresas</title>
+  <meta name="description" content="Axia & Co no es una agencia. Somos el Growth Partner que entra en tu negocio, diseña el sistema y lo hace crecer. Diagnóstico estratégico gratuito." />
+  <meta name="author" content="Axia & Co" />
+  <link rel="canonical" href="https://axia.co/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://axia.co/" />
+  <meta property="og:title" content="Axia & Co | Growth Partner — Sistemas de Crecimiento" />
+  <meta property="og:description" content="No somos una agencia. Diseñamos sistemas de crecimiento que convierten tráfico en clientes y escalan tu facturación." />
+  <meta property="og:image" content="https://axia.co/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Axia & Co | Growth Partner" />
+  <meta name="twitter:description" content="No somos una agencia. Diseñamos sistemas de crecimiento que escalan tu facturación." />
+  <meta name="twitter:image" content="https://axia.co/og-image.jpg" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Axia & Co",
+    "url": "https://axia.co",
+    "logo": "https://axia.co/logo.png",
+    "description": "Growth Partner especializado en sistemas de crecimiento digital para empresas.",
+    "email": "hola@axia.co",
+    "sameAs": ["https://www.linkedin.com/company/axiaandco","https://www.instagram.com/axiaandco"]
+  }
+  </script>
+
+  <link rel="preload" href="logo.png" as="image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #080912;
+      --bg2:    #0C0D1E;
+      --bg3:    #10112A;
+      --txt:    #F2F2F4;
+      --txt2:   #686880;
+      --txt3:   #2C2D44;
+      --blue:   #5162E8;
+      --blue2:  #7080F0;
+      --bdim:   rgba(81,98,232,.1);
+      --border: rgba(255,255,255,.06);
+      --font:   'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--txt); font-family: var(--font); font-weight: 300; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font); cursor: pointer; border: none; background: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── UTILIDADES ─── */
+    .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0; }
+    .label { font-size:.6rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--txt2); }
+    .label-blue { color:var(--blue2); }
+
+    /* ─── LOGO TEXT ─── */
+    .logo-text { font-size: .82rem; font-weight: 900; letter-spacing: .2em; color: var(--txt); line-height: 1; }
+    .logo-text .amp { color: var(--blue); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 200;
+      padding: 1.3rem 5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid transparent;
+      transition: background .35s, border-color .35s;
+    }
+    nav.stuck { background: rgba(8,9,18,.95); backdrop-filter: blur(20px); border-color: var(--border); }
+    .nav-logo img { height: 34px; display: block; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: .72rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: var(--txt2); transition: color .2s; }
+    .nav-links a:hover { color: var(--txt); }
+    .nav-cta { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--blue); padding: .7rem 1.6rem; transition: opacity .2s, transform .15s; }
+    .nav-cta:hover { opacity: .88; transform: translateY(-1px); }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100dvh; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 0 5rem 5.5rem;
+    }
+    .hero-glow {
+      position: absolute; top: 15%; left: 40%; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(81,98,232,.15) 0%, transparent 65%);
+      pointer-events: none; transform: translateX(-50%);
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: .65rem;
+      font-size: .6rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--blue2); border: 1px solid rgba(81,98,232,.25);
+      padding: .45rem 1rem; margin-bottom: 2.5rem; width: fit-content;
+    }
+    .hero-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--blue); animation: pulse 2.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.7)} }
+
+    .hero-h1 {
+      font-size: clamp(4.5rem, 10vw, 11rem); font-weight: 900;
+      line-height: .88; letter-spacing: -.045em; text-transform: uppercase;
+      margin-bottom: 3.5rem;
+    }
+    .hero-h1 .dim { color: var(--txt2); font-weight: 100; }
+    .hero-h1 .blue { color: var(--blue); }
+
+    .hero-bottom {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4rem;
+      padding-top: 3rem; border-top: 1px solid var(--border);
+    }
+    .hero-sub { font-size: .9rem; color: var(--txt2); line-height: 1.8; max-width: 34ch; }
+    .hero-sub strong { color: var(--txt); font-weight: 500; }
+    .hero-stats { display: flex; gap: 2.5rem; }
+    .h-stat-val { font-size: 2.2rem; font-weight: 200; letter-spacing: -.04em; line-height: 1; }
+    .h-stat-lbl { font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--txt2); margin-top: .35rem; }
+    .hero-actions { display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; gap: .9rem; }
+
+    .btn-prim { display: inline-flex; align-items: center; gap: .7rem; background: var(--blue); color: #fff; font-size: .73rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 1.1rem 2.2rem; transition: opacity .2s, transform .15s; }
+    .btn-prim:hover { opacity: .88; transform: translateY(-2px); }
+    .btn-prim svg { transition: transform .2s; }
+    .btn-prim:hover svg { transform: translateX(4px); }
+    .btn-sec { font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; color: var(--txt2); display: flex; align-items: center; gap: .4rem; transition: color .2s; }
+    .btn-sec:hover { color: var(--txt); }
+
+    .scroll-line { position: absolute; bottom: 5.5rem; right: 5rem; display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+    .scroll-line-text { font-size: .52rem; letter-spacing: .25em; text-transform: uppercase; color: var(--txt3); writing-mode: vertical-rl; }
+    .scroll-line-bar { width: 1px; height: 52px; background: var(--txt3); position: relative; overflow: hidden; }
+    .scroll-line-bar::after { content:''; position:absolute; top:-100%; left:0; width:100%; height:100%; background:var(--blue); animation:lineDown 1.8s ease-in-out infinite; }
+    @keyframes lineDown { 0%{top:-100%} 100%{top:100%} }
+
+    /* ─── MARQUEE ─── */
+    .marquee-wrap { padding: 1.1rem 0; overflow: hidden; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .marquee-track { display: flex; gap: 4rem; white-space: nowrap; animation: marq 45s linear infinite; font-size: .6rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--txt2); }
+    .marquee-track .m-sep { color: var(--blue); }
+    @keyframes marq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ─── SECCIÓN BASE ─── */
+    .s { padding: 9rem 5rem; }
+    .s-alt { background: var(--bg2); }
+    .s-dark { background: var(--bg3); }
+    .s-num { font-size: .6rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--txt3); margin-bottom: 1.5rem; }
+    .s-label { font-size: .6rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--blue2); margin-bottom: 1.2rem; }
+    .s-h2 { font-size: clamp(2.2rem, 4.5vw, 4.2rem); font-weight: 800; letter-spacing: -.035em; line-height: .95; text-transform: uppercase; }
+    .s-h2 .dim { font-weight: 100; color: var(--txt2); }
+    .s-h2 .blue { color: var(--blue2); }
+    .s-sub { font-size: .88rem; color: var(--txt2); line-height: 1.78; max-width: 36ch; }
+    .s-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 5rem; margin-bottom: 5rem; }
+
+    /* ─── DIFERENCIA ─── */
+    .diff-list { list-style: none; }
+    .diff-item {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); margin-bottom: 1px; cursor: default;
+    }
+    .diff-cell {
+      background: var(--bg2); padding: 2rem 2.5rem;
+      display: flex; align-items: center; gap: 1rem;
+      transition: background .2s;
+    }
+    .diff-item:hover .diff-cell { background: #10112a; }
+    .diff-cell-icon { width: 18px; height: 18px; flex-shrink: 0; }
+    .diff-cell-text { font-size: .85rem; line-height: 1.5; }
+    .diff-cell.bad .diff-cell-text { color: var(--txt3); }
+    .diff-cell.good .diff-cell-text { color: var(--txt); font-weight: 500; }
+    .diff-header { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin-bottom: 1px; }
+    .diff-header-cell { background: var(--bg3); padding: 1rem 2.5rem; font-size: .58rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; display: flex; align-items: center; gap: .6rem; }
+    .diff-header-cell .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+    /* ─── RESULTADOS ─── */
+    .results-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
+    .results-left .big-claim { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -.025em; line-height: 1.05; margin-bottom: 1.5rem; }
+    .results-left p { font-size: .88rem; color: var(--txt2); line-height: 1.75; margin-bottom: 2rem; }
+    .results-kpi-row { display: flex; flex-direction: column; gap: 2px; }
+    .results-kpi {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg2); border: 1px solid var(--border);
+      padding: 2rem 2.5rem; position: relative; overflow: hidden;
+      transition: border-color .25s;
+    }
+    .results-kpi:hover { border-color: rgba(81,98,232,.3); }
+    .results-kpi::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--blue); opacity:0; transition:opacity .25s; }
+    .results-kpi:hover::before { opacity:1; }
+    .kpi-val { font-size: clamp(2.5rem,4vw,4rem); font-weight: 900; letter-spacing: -.05em; line-height: 1; color: var(--blue2); }
+    .kpi-info {}
+    .kpi-title { font-size: .82rem; font-weight: 600; color: var(--txt); margin-bottom: .3rem; }
+    .kpi-desc { font-size: .72rem; color: var(--txt2); }
+    .results-claim { margin-top: 1.5rem; font-size: .78rem; color: var(--txt2); font-style: italic; letter-spacing: .03em; }
+
+    /* ─── SERVICIOS ─── */
+    .services-list { list-style: none; }
+    .svc-item {
+      display: grid; grid-template-columns: 64px 1fr 1fr 1fr; gap: 3rem;
+      align-items: start; padding: 2.8rem 0; border-bottom: 1px solid var(--border);
+      transition: background .2s; position: relative;
+    }
+    .svc-item:first-child { border-top: 1px solid var(--border); }
+    .svc-item:hover { background: rgba(81,98,232,.03); }
+    .svc-num { font-size: .6rem; font-weight: 700; letter-spacing: .2em; color: var(--txt3); padding-top: .35rem; }
+    .svc-name { font-size: 1.5rem; font-weight: 800; letter-spacing: -.025em; line-height: 1.05; }
+    .svc-desc { font-size: .82rem; color: var(--txt2); line-height: 1.75; }
+    .svc-tag { font-size: .58rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blue2); border: 1px solid rgba(81,98,232,.22); padding: .35rem .75rem; align-self: flex-start; white-space: nowrap; }
+
+    /* ─── COMPARATIVA ─── */
+    .compare-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 3rem; padding-bottom: 5rem; margin-bottom: 5rem; border-bottom: 1px solid var(--border); }
+    .compare-side { display: flex; flex-direction: column; }
+    .compare-side.agency { align-items: flex-end; text-align: right; }
+    .compare-entity { font-size: .58rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; margin-bottom: .75rem; }
+    .compare-side.agency .compare-entity { color: var(--txt3); }
+    .compare-side.axia   .compare-entity { color: var(--blue2); }
+    .compare-big-score { font-size: clamp(5rem,11vw,9rem); font-weight: 900; letter-spacing: -.06em; line-height: .85; }
+    .compare-side.agency .compare-big-score { color: var(--txt3); }
+    .compare-side.axia   .compare-big-score { color: var(--blue2); }
+    .compare-score-sub { font-size: .65rem; color: var(--txt2); margin-top: .75rem; }
+    .compare-vs-wrap { text-align: center; }
+    .compare-vs { font-size: .58rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--txt3); border: 1px solid var(--txt3); padding: .5rem .9rem; display: inline-block; }
+    .compare-bar-row { display: grid; grid-template-columns: 1fr 200px 1fr; align-items: center; gap: 0; border-bottom: 1px solid var(--border); }
+    .compare-bar-row:first-child { border-top: 1px solid var(--border); }
+    .cbc-agency { display: flex; align-items: center; justify-content: flex-end; gap: 1rem; padding: 2rem 2rem 2rem 0; }
+    .cbc-agency .bar-pct { font-size: .7rem; font-weight: 600; color: var(--txt3); min-width: 32px; text-align: right; flex-shrink: 0; }
+    .cbc-agency .bar-track { height: 5px; background: var(--bg3); flex: 1; max-width: 280px; display: flex; justify-content: flex-end; overflow: hidden; }
+    .cbc-agency .bar-fill { height: 100%; background: var(--txt3); width: 0; transition: width 1.1s cubic-bezier(.4,0,.2,1); }
+    .compare-metric-label { text-align: center; font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--txt2); padding: 0 1rem; transition: color .2s; }
+    .compare-bar-row:hover .compare-metric-label { color: var(--txt); }
+    .cbc-axia { display: flex; align-items: center; justify-content: flex-start; gap: 1rem; padding: 2rem 0 2rem 2rem; }
+    .cbc-axia .bar-track { height: 5px; background: var(--bg3); flex: 1; max-width: 280px; overflow: hidden; }
+    .cbc-axia .bar-fill { height: 100%; background: var(--blue); width: 0; transition: width 1.1s cubic-bezier(.4,0,.2,1); box-shadow: 0 0 10px rgba(81,98,232,.5); }
+    .cbc-axia .bar-pct { font-size: .7rem; font-weight: 700; color: var(--blue2); min-width: 32px; flex-shrink: 0; }
+    .compare-bar-row.animated .cbc-agency .bar-fill { width: var(--agency-w); }
+    .compare-bar-row.animated .cbc-axia   .bar-fill { width: var(--axia-w);   }
+
+    /* ─── MANIFIESTO ─── */
+    .manifesto-section { min-height: 80vh; display: flex; align-items: center; background: var(--bg3); position: relative; overflow: hidden; }
+    .manifesto-section::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 60% 50%, rgba(81,98,232,.1) 0%, transparent 65%); pointer-events:none; }
+    .manifesto-inner { position: relative; z-index: 1; max-width: 1400px; width: 100%; }
+    .manifesto-pre { font-size: .6rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--blue2); margin-bottom: 2.5rem; display: flex; align-items: center; gap: .8rem; }
+    .manifesto-pre::before { content:''; display:block; width:2.5rem; height:1px; background:var(--blue); }
+    .manifesto-h { font-size: clamp(2.5rem, 6vw, 6.5rem); font-weight: 900; letter-spacing: -.04em; line-height: .9; text-transform: uppercase; margin-bottom: 4rem; }
+    .manifesto-h .dim { font-weight: 100; color: var(--txt2); display: block; }
+    .manifesto-lines { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .manifesto-line { background: var(--bg3); padding: 2rem 2.5rem; font-size: .88rem; line-height: 1.6; color: var(--txt2); border-left: 2px solid transparent; transition: border-color .2s, color .2s, background .2s; }
+    .manifesto-line:hover { border-color: var(--blue); color: var(--txt); background: rgba(81,98,232,.04); }
+    .manifesto-line strong { color: var(--txt); font-weight: 600; display: block; margin-bottom: .25rem; font-size: .9rem; }
+
+    /* ─── FILTRO CLIENTE ─── */
+    .filter-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+    .filter-left .s-h2 { margin-bottom: 1.5rem; }
+    .filter-left p { font-size: .88rem; color: var(--txt2); line-height: 1.75; }
+    .filter-checks { list-style: none; margin-bottom: 2rem; }
+    .filter-check {
+      display: flex; align-items: center; gap: 1.2rem; padding: 1.3rem 0;
+      border-bottom: 1px solid var(--border); cursor: pointer;
+      transition: color .2s;
+    }
+    .filter-check:first-child { border-top: 1px solid var(--border); }
+    .filter-check:hover { color: var(--txt); }
+    .fc-box {
+      width: 20px; height: 20px; border: 1px solid var(--txt3); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s;
+    }
+    .fc-box svg { opacity: 0; transition: opacity .2s; }
+    .filter-check.checked .fc-box { background: var(--blue); border-color: var(--blue); }
+    .filter-check.checked .fc-box svg { opacity: 1; }
+    .filter-check.checked { color: var(--txt); }
+    .fc-text { font-size: .85rem; }
+    .filter-cta { opacity: 0; transform: translateY(8px); transition: opacity .4s, transform .4s; pointer-events: none; }
+    .filter-cta.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .filter-cta-box { background: var(--blue); padding: 2rem 2.5rem; }
+    .filter-cta-box p { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: 1.2rem; }
+    .filter-cta-box a { display: inline-flex; align-items: center; gap: .6rem; color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .filter-cta-box a svg { transition: transform .2s; }
+    .filter-cta-box a:hover svg { transform: translateX(4px); }
+    .filter-note { font-size: .75rem; color: var(--txt2); line-height: 1.7; padding-top: 2rem; font-style: italic; }
+
+    /* ─── VERDAD INCÓMODA ─── */
+    .truth-section { background: var(--bg3); }
+    .truth-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); }
+    .truth-card { background: var(--bg3); padding: 3rem 2.5rem; transition: background .25s; }
+    .truth-card:hover { background: #13142c; }
+    .truth-no { font-size: .88rem; color: var(--txt3); text-decoration: line-through; margin-bottom: 1.5rem; line-height: 1.5; }
+    .truth-yes { font-size: 1rem; font-weight: 700; color: var(--txt); line-height: 1.4; letter-spacing: -.01em; }
+    .truth-yes::before { content: '→ '; color: var(--blue2); }
+
+    /* ─── PRUEBA ─── */
+    .proof-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
+    .proof-left .s-h2 { margin-bottom: 1.5rem; }
+    .proof-left p { font-size: .88rem; color: var(--txt2); line-height: 1.75; margin-bottom: 2rem; }
+    .proof-claim { font-size: .8rem; color: var(--txt2); font-style: italic; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .proof-items { display: flex; flex-direction: column; gap: 2px; }
+    .proof-item {
+      background: var(--bg2); border: 1px solid var(--border); padding: 2rem 2.5rem;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      transition: border-color .25s;
+    }
+    .proof-item:hover { border-color: rgba(81,98,232,.3); }
+    .proof-num { font-size: 2rem; font-weight: 100; letter-spacing: -.04em; line-height: 1; color: var(--txt3); flex-shrink: 0; }
+    .proof-text strong { display: block; font-size: .88rem; font-weight: 700; color: var(--txt); margin-bottom: .35rem; }
+    .proof-text span { font-size: .78rem; color: var(--txt2); line-height: 1.6; }
+
+    /* ─── NOSOTROS ─── */
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+    .about-manifesto { font-size: clamp(1.6rem,3vw,2.5rem); font-weight: 800; letter-spacing: -.025em; line-height: 1.05; margin-bottom: 2.5rem; }
+    .about-manifesto .blue { color: var(--blue2); }
+    .about-body { font-size: .87rem; color: var(--txt2); line-height: 1.85; }
+    .about-body p + p { margin-top: 1.1rem; }
+    .about-values { margin-top: 3rem; list-style: none; }
+    .about-value { display: flex; align-items: flex-start; gap: 1.2rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); }
+    .about-value:first-child { border-top: 1px solid var(--border); }
+    .about-val-num { font-size: .58rem; font-weight: 700; letter-spacing: .15em; color: var(--blue2); padding-top: .25rem; flex-shrink: 0; }
+    .about-val-text strong { font-weight: 700; color: var(--txt); font-size: .83rem; display: block; margin-bottom: .2rem; }
+    .about-val-text span { font-size: .76rem; color: var(--txt2); line-height: 1.6; }
+    .about-teamlabs { margin-top: 2.5rem; padding: 1.8rem 2rem; border: 1px solid rgba(81,98,232,.18); background: var(--bdim); }
+    .about-tl-label { font-size: .56rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--blue2); margin-bottom: .6rem; }
+    .about-teamlabs p { font-size: .78rem; color: var(--txt2); line-height: 1.7; }
+    .about-right-vis { width: 100%; aspect-ratio: 4/5; background: linear-gradient(150deg,#0d1560 0%,#1a1070 40%,#08091a 100%); position: relative; overflow: hidden; }
+    .about-right-vis::after { content:''; position:absolute; inset:0; background:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(81,98,232,.04) 60px,rgba(81,98,232,.04) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(81,98,232,.04) 60px,rgba(81,98,232,.04) 61px); }
+    .about-big-word { position:absolute; bottom:-1rem; right:-1rem; font-size:9rem; font-weight:900; letter-spacing:-.05em; color:rgba(81,98,232,.1); line-height:1; user-select:none; text-transform:uppercase; }
+    .about-stat-overlay { position:absolute; top:2.5rem; left:2.5rem; display:flex; flex-direction:column; gap:1.2rem; }
+    .about-stat-box { background:rgba(8,9,26,.85); border:1px solid rgba(81,98,232,.18); backdrop-filter:blur(10px); padding:1.2rem 1.8rem; }
+    .about-stat-box .val { font-size:2rem; font-weight:200; letter-spacing:-.04em; line-height:1; }
+    .about-stat-box .lbl { font-size:.58rem; letter-spacing:.18em; text-transform:uppercase; color:var(--txt2); margin-top:.3rem; }
+
+    /* ─── BLOG ─── */
+    .blog-grid { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto auto; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .blog-card { background: var(--bg); padding: 2.5rem; position: relative; overflow: hidden; transition: background .25s; }
+    .blog-card:hover { background: var(--bg2); }
+    .blog-card.featured { grid-row: span 2; padding: 3.5rem; display: flex; flex-direction: column; justify-content: flex-end; min-height: 500px; }
+    .blog-card.featured .blog-title { font-size: 1.65rem; }
+    .blog-img-wrap { overflow: hidden; }
+    .blog-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; filter: grayscale(20%); transition: filter .4s, transform .5s; }
+    .blog-card:hover .blog-img { filter: grayscale(0%); transform: scale(1.03); }
+    .blog-card.featured .blog-img-wrap { position: absolute; inset: 0; }
+    .blog-card.featured .blog-img { width: 100%; height: 100%; aspect-ratio: unset; }
+    .blog-featured-bg { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,9,18,.98) 0%, rgba(8,9,18,.6) 40%, transparent 70%); pointer-events: none; }
+    .blog-featured-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0f1a4a 0%, #1a1580 50%, #0e0a26 100%); opacity: .5; }
+    .blog-cat { font-size: .56rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--blue2); margin-bottom: 1.1rem; }
+    .blog-title { font-size: .95rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; margin-bottom: .85rem; }
+    .blog-excerpt { font-size: .76rem; color: var(--txt2); line-height: 1.65; margin-bottom: 1.4rem; }
+    .blog-meta { display: flex; align-items: center; justify-content: space-between; }
+    .blog-read { font-size: .6rem; color: var(--txt3); letter-spacing: .1em; text-transform: uppercase; }
+    .blog-link { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); display: flex; align-items: center; gap: .4rem; transition: gap .2s; }
+    .blog-link:hover { gap: .7rem; }
+
+    /* ─── FAQ ─── */
+    .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 8rem; }
+    .faq-left { position: sticky; top: 9rem; align-self: start; }
+    .faq-list { list-style: none; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.8rem 0; font-size: .88rem; font-weight: 500; color: var(--txt); cursor: pointer; background: none; border: none; font-family: var(--font); text-align: left; }
+    .faq-icon { width: 20px; height: 20px; border: 1px solid var(--txt3); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; color: var(--txt2); transition: border-color .2s, transform .3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--blue); color: var(--blue); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding-bottom: 1.8rem; font-size: .82rem; color: var(--txt2); line-height: 1.82; }
+
+    /* ─── CTA FINAL ─── */
+    .final-cta {
+      min-height: 80vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; overflow: hidden; background: var(--bg3);
+      padding: 7rem 2rem 5rem;
+    }
+    .final-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 60%, rgba(81,98,232,.18) 0%, transparent 65%); pointer-events:none; }
+    .final-cta-inner { position: relative; z-index: 1; }
+    .final-cta-h { font-size: clamp(3rem, 7vw, 8rem); font-weight: 900; letter-spacing: -.045em; line-height: .9; text-transform: uppercase; margin-bottom: 2.5rem; }
+    .final-cta-h .dim { font-weight: 100; color: var(--txt2); display: block; }
+    .final-cta-h .blue { color: var(--blue); }
+    .final-cta-sub { font-size: .9rem; color: var(--txt2); max-width: 36ch; margin: 0 auto 3.5rem; line-height: 1.75; }
+    .final-cta-sub strong { color: var(--txt); font-weight: 500; }
+    .final-cta-alt { display: block; margin-top: 1.5rem; font-size: .7rem; color: var(--txt3); letter-spacing: .08em; }
+
+    /* ─── CONTACTO ─── */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+    .contact-big { font-size: clamp(2.5rem,5vw,5rem); font-weight: 900; letter-spacing: -.045em; line-height: .9; text-transform: uppercase; margin-bottom: 3rem; }
+    .contact-big .dim { display: block; font-weight: 100; color: var(--txt2); }
+    .contact-big .blue { color: var(--blue2); }
+    .contact-perks { list-style: none; margin-bottom: 2.5rem; }
+    .cp { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--txt2); }
+    .cp:first-child { border-top: 1px solid var(--border); }
+    .cp-num { font-size: .58rem; font-weight: 700; letter-spacing: .1em; color: var(--blue2); padding-top: .2rem; }
+    .contact-note { font-size: .65rem; color: var(--txt3); letter-spacing: .08em; }
+    .form { display: flex; flex-direction: column; gap: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-field { display: flex; flex-direction: column; gap: .5rem; }
+    .form-label { font-size: .58rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--txt3); }
+    .form-input, .form-textarea { background: transparent; border: none; border-bottom: 1px solid var(--txt3); padding: .8rem 0; font-size: .87rem; font-family: var(--font); color: var(--txt); font-weight: 300; transition: border-color .2s; outline: none; width: 100%; }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--txt3); }
+    .form-input:focus, .form-textarea:focus { border-color: var(--blue); }
+    .form-textarea { resize: none; }
+    .form-submit { display: flex; align-items: center; justify-content: space-between; background: var(--blue); color: #fff; font-size: .73rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 1.2rem 2rem; transition: opacity .2s; margin-top: .5rem; }
+    .form-submit:hover { opacity: .88; }
+    .form-disc { font-size: .62rem; color: var(--txt3); letter-spacing: .06em; }
+    .form-success { display: none; padding: 4rem 0; text-align: center; }
+    .form-success.show { display: block; }
+    .form-success-icon { width: 46px; height: 46px; border: 1px solid var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.4rem; }
+    .form-success h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: .5rem; }
+    .form-success p { font-size: .8rem; color: var(--txt2); }
+
+    /* ─── FOOTER ─── */
+    footer { padding: 4rem 5rem 2.5rem; border-top: 1px solid var(--border); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-logo img { height: 30px; margin-bottom: 1rem; }
+    .footer-tagline { font-size: .78rem; color: var(--txt2); line-height: 1.7; max-width: 28ch; margin-bottom: 2rem; }
+    .footer-socials { display: flex; gap: .65rem; }
+    .footer-social { width: 34px; height: 34px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--txt2); transition: border-color .2s, color .2s; }
+    .footer-social:hover { border-color: var(--blue); color: var(--blue2); }
+    .footer-col-title { font-size: .58rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--txt3); margin-bottom: 1.4rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: .75rem; }
+    .footer-links a { font-size: .78rem; color: var(--txt2); transition: color .2s; }
+    .footer-links a:hover { color: var(--txt); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+    .footer-copy { font-size: .65rem; color: var(--txt3); letter-spacing: .06em; }
+    .footer-claim { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue2); }
+
+    /* ─── REVEAL ─── */
+    .rv { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .rv.in { opacity: 1; transform: translateY(0); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero, .s { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .s { padding-top: 5rem; padding-bottom: 5rem; }
+      .hero { padding-bottom: 4rem; }
+      .hero-bottom, .results-layout, .proof-layout, .about-layout, .contact-layout, .filter-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-actions { align-items: flex-start; }
+      .s-header { flex-direction: column; gap: 2rem; }
+      .diff-header, .diff-item { grid-template-columns: 1fr; }
+      .diff-cell.bad { display: none; }
+      .svc-item { grid-template-columns: 40px 1fr; gap: 1rem; }
+      .svc-desc, .svc-tag { display: none; }
+      .compare-header { grid-template-columns: 1fr auto 1fr; gap: 1rem; }
+      .compare-bar-row { grid-template-columns: 1fr 100px 1fr; }
+      .compare-metric-label { font-size: .58rem; padding: 0 .4rem; }
+      .truth-grid { grid-template-columns: 1fr; }
+      .faq-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .faq-left { position: static; }
+      .manifesto-lines { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-card.featured { grid-row: span 1; min-height: 360px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer, footer { padding: 3rem 1.5rem 2rem; }
+      .scroll-line { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<nav id="nav">
+  <a href="#" class="nav-logo"><span class="logo-text">AXIA <span class="amp">&</span> CO</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Estrategia gratuita</a>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="hero" aria-label="Axia & Co Growth Partner">
+  <div class="hero-glow"></div>
+
+  <div class="hero-tag rv">
+    <span class="hero-tag-dot"></span>
+    Growth Partner · Nacidos en TeamLabs
+  </div>
+
+  <h1 class="hero-h1 rv" style="transition-delay:.08s">
+    Tu negocio<br>
+    <span class="blue">crece</span><br>
+    <span class="dim">o muere.</span>
+  </h1>
+
+  <div class="hero-bottom rv" style="transition-delay:.18s">
+    <p class="hero-sub">
+      Diseñamos sistemas de crecimiento que convierten tráfico en clientes y escalan tu facturación.<br><br>
+      <strong>No somos una agencia. Somos el equipo que entra en tu negocio y lo hace crecer.</strong>
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="h-stat-val">+94%</div>
+        <div class="h-stat-lbl">Crecimiento medio</div>
+      </div>
+      <div>
+        <div class="h-stat-val">3.2x</div>
+        <div class="h-stat-lbl">ROAS medio</div>
+      </div>
+      <div>
+        <div class="h-stat-val">−37%</div>
+        <div class="h-stat-lbl">Coste adquisición</div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-prim">
+        Agenda tu estrategia gratuita
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#diferencia" class="btn-sec">Ver cómo trabajamos ↓</a>
+    </div>
+  </div>
+
+  <div class="scroll-line" aria-hidden="true">
+    <div class="scroll-line-text">Scroll</div>
+    <div class="scroll-line-bar"></div>
+  </div>
+</section>
+
+<!-- ════ MARQUEE ════ -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Las agencias ejecutan</span><span class="m-sep">—</span>
+    <span>Nosotros construimos crecimiento</span><span class="m-sep">—</span>
+    <span>El marketing es rentable o no sirve</span><span class="m-sep">—</span>
+    <span>No necesitas tráfico. Necesitas conversión</span><span class="m-sep">—</span>
+    <span>Si no mides, no creces</span><span class="m-sep">—</span>
+    <span>Resultados, no promesas</span><span class="m-sep">—</span>
+    <span>Sistemas, no servicios</span><span class="m-sep">—</span>
+    <span>El boca a boca no escala</span><span class="m-sep">—</span>
+    <span>Las agencias ejecutan</span><span class="m-sep">—</span>
+    <span>Nosotros construimos crecimiento</span><span class="m-sep">—</span>
+    <span>El marketing es rentable o no sirve</span><span class="m-sep">—</span>
+    <span>No necesitas tráfico. Necesitas conversión</span><span class="m-sep">—</span>
+    <span>Si no mides, no creces</span><span class="m-sep">—</span>
+    <span>Resultados, no promesas</span><span class="m-sep">—</span>
+    <span>Sistemas, no servicios</span><span class="m-sep">—</span>
+    <span>El boca a boca no escala</span><span class="m-sep">—</span>
+  </div>
+</div>
+
+<!-- ════ DIFERENCIA ════ -->
+<section class="s s-alt" id="diferencia">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">01 — El método</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Las agencias ejecutan.<br>
+        <span class="dim">Nosotros construimos</span><br>
+        crecimiento.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">
+      La diferencia no está en los servicios que ofrecemos.<br>
+      Está en cómo pensamos, qué decidimos y dónde miramos.
+    </p>
+  </div>
+
+  <div class="rv" style="transition-delay:.15s">
+    <div class="diff-header">
+      <div class="diff-header-cell"><span class="dot" style="background:var(--txt3)"></span>Agencia tradicional</div>
+      <div class="diff-header-cell"><span class="dot" style="background:var(--blue)"></span>Axia & Co</div>
+    </div>
+    <ul class="diff-list">
+      <li class="diff-item">
+        <div class="diff-cell bad"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="var(--txt3)" stroke-width="1.4" stroke-linecap="round"/></svg><span class="diff-cell-text">Vende servicios. Lo que pase con tu negocio no es su problema.</span></div>
+        <div class="diff-cell good"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 4.5" stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="diff-cell-text">Diseña sistemas. Tu crecimiento es nuestra única métrica de éxito.</span></div>
+      </li>
+      <li class="diff-item">
+        <div class="diff-cell bad"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="var(--txt3)" stroke-width="1.4" stroke-linecap="round"/></svg><span class="diff-cell-text">Ejecuta tareas. Entrega lo que se le pide, no lo que tu negocio necesita.</span></div>
+        <div class="diff-cell good"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 4.5" stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="diff-cell-text">Toma decisiones estratégicas. Sabemos cuándo pivotar antes de que lo pidas.</span></div>
+      </li>
+      <li class="diff-item">
+        <div class="diff-cell bad"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="var(--txt3)" stroke-width="1.4" stroke-linecap="round"/></svg><span class="diff-cell-text">Mide métricas de vanidad. Impresiones, clics, alcance.</span></div>
+        <div class="diff-cell good"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 4.5" stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="diff-cell-text">Impacta en facturación. CAC, LTV, ROAS, ingresos. O no hay deal.</span></div>
+      </li>
+      <li class="diff-item">
+        <div class="diff-cell bad"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="var(--txt3)" stroke-width="1.4" stroke-linecap="round"/></svg><span class="diff-cell-text">Trabaja fuera de tu negocio. Nunca entiende el contexto real.</span></div>
+        <div class="diff-cell good"><svg class="diff-cell-icon" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 4.5" stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="diff-cell-text">Se integra en tu negocio. Conocemos tus márgenes, tu cliente y tu mercado.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════ RESULTADOS ════ -->
+<section class="s" id="resultados">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">02 — Resultados</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Crecimiento real,<br><span class="dim">no promesas.</span>
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">
+      Nuestros clientes no buscan presencia. Buscan resultados.<br>
+      Aquí están los números que importan.
+    </p>
+  </div>
+  <div class="results-layout rv" style="transition-delay:.15s">
+    <div class="results-left">
+      <p class="big-claim">El marketing no es bonito.<br>Es rentable o no sirve.</p>
+      <p>Trabajamos con negocios que ya tienen tracción y quieren escalar con control y previsión. No prometemos magia. Construimos sistemas.</p>
+      <a href="#contacto" class="btn-prim" style="margin-top:2rem;">
+        Quiero estos resultados
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="results-kpi-row">
+      <div class="results-kpi">
+        <div class="kpi-info">
+          <div class="kpi-title">Crecimiento en facturación</div>
+          <div class="kpi-desc">Media de clientes en los primeros 6 meses</div>
+        </div>
+        <div class="kpi-val">+94%</div>
+      </div>
+      <div class="results-kpi">
+        <div class="kpi-info">
+          <div class="kpi-title">ROAS en campañas</div>
+          <div class="kpi-desc">Retorno medio en campañas de paid media</div>
+        </div>
+        <div class="kpi-val">3.2x</div>
+      </div>
+      <div class="results-kpi">
+        <div class="kpi-info">
+          <div class="kpi-title">Coste por adquisición</div>
+          <div class="kpi-desc">Reducción media vs punto de partida</div>
+        </div>
+        <div class="kpi-val">−37%</div>
+      </div>
+      <p class="results-claim">Esto no es suerte. Es estrategia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SERVICIOS ════ -->
+<section class="s s-alt" id="servicios">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">03 — Servicios</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Lo que hacemos<br>
+        <span class="dim">impacta directamente</span><br>
+        en tu negocio.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">
+      No hacemos todo. Hacemos muy bien lo que mueve el marcador.
+    </p>
+  </div>
+  <ul class="services-list">
+    <li class="svc-item rv">
+      <span class="svc-num">01</span>
+      <span class="svc-name">Estrategia de<br>Crecimiento</span>
+      <p class="svc-desc">Diseñamos un sistema claro para escalar tu negocio con control y previsión. Diagnóstico completo, hoja de ruta de 90 días y seguimiento quincenal de KPIs reales.</p>
+      <span class="svc-tag">Estrategia</span>
+    </li>
+    <li class="svc-item rv" style="transition-delay:.07s">
+      <span class="svc-num">02</span>
+      <span class="svc-name">Paid<br>Media</span>
+      <p class="svc-desc">Convertimos inversión en clientes rentables. Meta Ads, Google Ads, LinkedIn — con tracking preciso, optimización continua y reporting orientado a ROI, no a impresiones.</p>
+      <span class="svc-tag">Performance</span>
+    </li>
+    <li class="svc-item rv" style="transition-delay:.14s">
+      <span class="svc-num">03</span>
+      <span class="svc-name">Desarrollo<br>Web</span>
+      <p class="svc-desc">Creamos webs diseñadas para vender, no para decorar. WordPress o código a medida. Cada decisión de diseño orientada a conversión, velocidad y posicionamiento.</p>
+      <span class="svc-tag">Web & CRO</span>
+    </li>
+    <li class="svc-item rv" style="transition-delay:.21s">
+      <span class="svc-num">04</span>
+      <span class="svc-name">Contenido<br>& Redes</span>
+      <p class="svc-desc">Generamos contenido que posiciona, atrae y convierte. Estrategia por canal, producción, clones de IA personalizados y métricas que van más allá del like.</p>
+      <span class="svc-tag">Contenido</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ════ COMPARATIVA ════ -->
+<section class="s" id="comparativa">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">04 — Comparativa</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Crecimiento<br>
+        <span class="dim">con Axia</span><br>
+        vs el resto.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">
+      Cinco dimensiones. Un resultado.<br>
+      Los números no mienten.
+    </p>
+  </div>
+  <div class="compare-header rv" style="transition-delay:.15s">
+    <div class="compare-side agency">
+      <div class="compare-entity">Agencia Tradicional</div>
+      <div class="compare-big-score" id="score-agency">0</div>
+      <div class="compare-score-sub">puntos sobre 100</div>
+    </div>
+    <div class="compare-vs-wrap"><div class="compare-vs">VS</div></div>
+    <div class="compare-side axia">
+      <div class="compare-entity">Axia & Co</div>
+      <div class="compare-big-score" id="score-axia">0</div>
+      <div class="compare-score-sub">puntos sobre 100</div>
+    </div>
+  </div>
+  <div class="rv" style="transition-delay:.2s" id="compare-bars">
+    <div class="compare-bar-row" data-agency="30" data-axia="93">
+      <div class="cbc-agency"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">30</span></div>
+      <div class="compare-metric-label">Resultados<br>económicos</div>
+      <div class="cbc-axia"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">93</span></div>
+    </div>
+    <div class="compare-bar-row" data-agency="22" data-axia="96">
+      <div class="cbc-agency"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">22</span></div>
+      <div class="compare-metric-label">Cercanía</div>
+      <div class="cbc-axia"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">96</span></div>
+    </div>
+    <div class="compare-bar-row" data-agency="28" data-axia="94">
+      <div class="cbc-agency"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">28</span></div>
+      <div class="compare-metric-label">Personalización</div>
+      <div class="cbc-axia"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">94</span></div>
+    </div>
+    <div class="compare-bar-row" data-agency="18" data-axia="91">
+      <div class="cbc-agency"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">18</span></div>
+      <div class="compare-metric-label">Adaptabilidad</div>
+      <div class="cbc-axia"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">91</span></div>
+    </div>
+    <div class="compare-bar-row" data-agency="12" data-axia="97">
+      <div class="cbc-agency"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">12</span></div>
+      <div class="compare-metric-label">Innovación</div>
+      <div class="cbc-axia"><div class="bar-track"><div class="bar-fill"></div></div><span class="bar-pct">97</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ MANIFIESTO ════ -->
+<section class="manifesto-section s" id="manifiesto">
+  <div class="manifesto-inner rv">
+    <div class="manifesto-pre">No somos una agencia</div>
+    <h2 class="manifesto-h">
+      Somos el equipo<br>
+      <span class="dim">que entra, entiende</span><br>
+      y construye.
+    </h2>
+    <div class="manifesto-lines">
+      <div class="manifesto-line">
+        <strong>No trabajamos para ti.</strong>
+        Trabajamos contigo. Hay una diferencia enorme entre los dos y se nota en cada decisión que tomamos.
+      </div>
+      <div class="manifesto-line">
+        <strong>No somos externos.</strong>
+        Nos integramos en tu negocio, entendemos cómo funciona y construimos el sistema que lo hace crecer.
+      </div>
+      <div class="manifesto-line">
+        <strong>No buscamos que dependas de nosotros.</strong>
+        Buscamos que crezcas gracias a nosotros. Construimos sistemas que funcionan aunque no estemos.
+      </div>
+      <div class="manifesto-line">
+        <strong>Si entramos, es porque creemos en ello.</strong>
+        No trabajamos con modelos que no podamos escalar. Seleccionamos con quién trabajamos.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FILTRO CLIENTE ════ -->
+<section class="s s-alt" id="filtro">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">05 — ¿Es para ti?</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Si estás aquí,<br>
+        <span class="dim">probablemente</span><br>
+        ya lo sabes.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">
+      No todo el mundo necesita esto.<br>
+      Pero si tú sí, lo sabes.
+    </p>
+  </div>
+  <div class="filter-layout">
+    <div class="filter-left rv">
+      <ul class="filter-checks" id="filter-checks">
+        <li class="filter-check">
+          <div class="fc-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="fc-text">Ya facturas pero no escalas</span>
+        </li>
+        <li class="filter-check">
+          <div class="fc-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="fc-text">Inviertes en marketing pero no tienes retorno claro</span>
+        </li>
+        <li class="filter-check">
+          <div class="fc-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="fc-text">Dependes del boca a boca para crecer</span>
+        </li>
+        <li class="filter-check">
+          <div class="fc-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="fc-text">Sabes que tu negocio puede dar mucho más</span>
+        </li>
+      </ul>
+      <div class="filter-cta" id="filter-cta">
+        <div class="filter-cta-box">
+          <p>Lo reconoces. Nosotros tenemos el sistema para resolverlo.</p>
+          <a href="#contacto">
+            Agenda tu estrategia gratuita
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="transition-delay:.1s">
+      <p class="filter-note">
+        Trabajamos con un número limitado de clientes para garantizar la calidad de cada partnership. No somos la opción para todos. Somos la opción para los que quieren crecer en serio.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ VERDAD INCÓMODA ════ -->
+<section class="s truth-section" id="verdad">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">06 — La verdad</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Las agencias viven de<br>
+        <span class="dim">que no entiendas</span><br>
+        esto.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">Tres cosas que nadie te dice pero cambian todo.</p>
+  </div>
+  <div class="truth-grid rv" style="transition-delay:.15s">
+    <div class="truth-card">
+      <div class="truth-no">No necesitas más tráfico</div>
+      <div class="truth-yes">Necesitas convertir mejor el que ya tienes</div>
+    </div>
+    <div class="truth-card">
+      <div class="truth-no">No necesitas más contenido</div>
+      <div class="truth-yes">Necesitas una estrategia detrás de cada pieza</div>
+    </div>
+    <div class="truth-card">
+      <div class="truth-no">No necesitas una agencia</div>
+      <div class="truth-yes">Necesitas un sistema de crecimiento que escale</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PRUEBA ════ -->
+<section class="s s-alt" id="prueba">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">07 — Caso</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        El problema<br>
+        <span class="dim">nunca es</span><br>
+        el marketing.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">Es la falta de sistema.</p>
+  </div>
+  <div class="proof-layout">
+    <div class="proof-left rv">
+      <p>Clientes que llegaban sin estructura, sin datos y sin control sobre su crecimiento. Hoy tienen algo diferente.</p>
+      <p class="proof-claim">Esto no es suerte. Es estrategia.</p>
+      <a href="#contacto" class="btn-prim" style="margin-top:2.5rem;">
+        Quiero un sistema así
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="proof-items rv" style="transition-delay:.1s">
+      <div class="proof-item">
+        <div class="proof-num">01</div>
+        <div class="proof-text">
+          <strong>Un sistema de adquisición predecible</strong>
+          <span>Saben exactamente de dónde vienen sus clientes y cuánto les cuesta conseguir uno nuevo. Sin sorpresas, sin depender del azar.</span>
+        </div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">02</div>
+        <div class="proof-text">
+          <strong>Un coste por cliente optimizado</strong>
+          <span>Reducción media del 37% en CAC en los primeros 90 días. Cada euro invertido rinde más que el mes anterior.</span>
+        </div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">03</div>
+        <div class="proof-text">
+          <strong>Un crecimiento escalable</strong>
+          <span>El sistema crece con el negocio. No depende de que estemos nosotros ni de que ellos lo gestionen todo.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ NOSOTROS ════ -->
+<section class="s" id="nosotros">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">08 — Nosotros</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        No nacimos<br>
+        <span class="dim">en una agencia.</span>
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">Nacimos donde el crecimiento, la experimentación y los datos son la cultura.</p>
+  </div>
+  <div class="about-layout">
+    <div class="rv">
+      <p class="about-manifesto">Somos el equipo que odiaba el modelo de agencia y decidió <span class="blue">romperlo.</span></p>
+      <div class="about-body">
+        <p>Axia & Co nació de una convicción simple: el modelo de agencia tradicional está roto. Cobra por horas, entrega servicios desconectados y se desentiende de los resultados reales.</p>
+        <p>Somos estrategas, diseñadores, tecnólogos y especialistas en datos formados en el ecosistema de TeamLabs — donde experimentar, fallar rápido y crecer no es un claim, es el día a día.</p>
+      </div>
+      <ul class="about-values">
+        <li class="about-value">
+          <span class="about-val-num">01</span>
+          <div class="about-val-text"><strong>Datos antes que opiniones</strong><span>Cada decisión respaldada por datos reales. La intuición es un punto de partida, nunca una conclusión.</span></div>
+        </li>
+        <li class="about-value">
+          <span class="about-val-num">02</span>
+          <div class="about-val-text"><strong>Resultados o no hay deal</strong><span>No facturamos por presentar trabajo. Facturamos cuando ese trabajo genera impacto real.</span></div>
+        </li>
+        <li class="about-value">
+          <span class="about-val-num">03</span>
+          <div class="about-val-text"><strong>Honestidad radical</strong><span>Si algo no va a funcionar, te lo decimos antes de empezar. Preferimos perder un cliente que prometer lo que no podemos cumplir.</span></div>
+        </li>
+      </ul>
+      <div class="about-teamlabs">
+        <div class="about-tl-label">Nacidos en TeamLabs</div>
+        <p>Ecosistema de innovación donde equipos reales construyen negocios reales. Nuestra escuela, nuestra red y nuestra forma de entender el emprendimiento: con piel en el juego.</p>
+      </div>
+    </div>
+    <div class="about-right-vis rv" style="transition-delay:.15s">
+      <div class="about-big-word">Axia</div>
+      <div class="about-stat-overlay">
+        <div class="about-stat-box"><div class="val">+94%</div><div class="lbl">ROI medio en clientes</div></div>
+        <div class="about-stat-box"><div class="val">72h</div><div class="lbl">De diagnóstico a ejecución</div></div>
+        <div class="about-stat-box"><div class="val">100%</div><div class="lbl">Orientados a resultados</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ BLOG ════ -->
+<section class="s s-alt" id="blog">
+  <div class="s-header">
+    <div>
+      <div class="s-num rv">09 — Blog</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s">
+        Lo que las agencias<br>
+        <span class="dim">nunca</span><br>
+        te dirán.
+      </h2>
+    </div>
+    <p class="s-sub rv" style="transition-delay:.1s">Casos reales, tácticas en ejecución y la mentalidad que separa los negocios que escalan.</p>
+    <a href="blog/index.html" class="btn-sec rv" style="transition-delay:.14s;margin-top:1rem;">Ver todos los artículos →</a>
+  </div>
+  <div class="blog-grid rv" style="transition-delay:.15s">
+    <article class="blog-card featured">
+      <div class="blog-featured-img"></div>
+      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&q=85&auto=format&fit=crop" alt="Estrategia de crecimiento digital para pymes" loading="lazy" width="900" height="506" /></div>
+      <div class="blog-featured-bg"></div>
+      <div style="position:relative;z-index:1;">
+        <div class="blog-cat">Estrategia · 8 min</div>
+        <h3 class="blog-title">Cómo escalar tu facturación un 20% sin quemar tu presupuesto en anuncios</h3>
+        <p class="blog-excerpt">Las 4 palancas de crecimiento que el 90% de los negocios ignora.</p>
+        <div class="blog-meta">
+          <span class="blog-read">Artículo destacado</span>
+          <a href="blog/escalar-facturacion.html" class="blog-link">Leer <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=85&auto=format&fit=crop" alt="Generación de leads para agencias inmobiliarias" loading="lazy" width="700" height="394" /></div>
+      <div class="blog-cat" style="margin-top:1.4rem;">Caso de estudio · 12 min</div>
+      <h3 class="blog-title">De 0 a 80 leads mensuales en inmobiliaria: el sistema exacto</h3>
+      <p class="blog-excerpt">90 días. 3 palancas. Un sistema que genera leads predecibles.</p>
+      <div class="blog-meta">
+        <span class="blog-read">12 min</span>
+        <a href="blog/leads-inmobiliaria.html" class="blog-link">Leer <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=700&q=85&auto=format&fit=crop" alt="Inteligencia artificial clon de IA para empresas" loading="lazy" width="700" height="394" /></div>
+      <div class="blog-cat" style="margin-top:1.4rem;">IA Aplicada · 6 min</div>
+      <h3 class="blog-title">Cómo un clon de IA multiplicó por 3 el contenido de una pyme</h3>
+      <p class="blog-excerpt">Grabamos una tarde. Ahora genera contenido todos los días.</p>
+      <div class="blog-meta">
+        <span class="blog-read">6 min</span>
+        <a href="blog/clon-ia-pyme.html" class="blog-link">Leer <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="s" id="faq">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="s-num rv">10 — FAQ</div>
+      <h2 class="s-h2 rv" style="transition-delay:.06s;font-size:clamp(2rem,3.5vw,3rem);">
+        Respuestas<br><span class="dim">sin</span><br>rodeos.
+      </h2>
+    </div>
+    <ul class="faq-list rv" style="transition-delay:.1s">
+      <li class="faq-item">
+        <button class="faq-q">¿Cuánto cuesta trabajar con Axia?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Depende del punto en el que esté tu negocio y del sistema que necesite. No tenemos tarifas estándar porque no trabajamos con soluciones estándar. La primera sesión es gratuita y en ella te damos una estimación real.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q">¿Cuándo veré resultados?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">En campañas de pago, los primeros datos llegan en 2–3 semanas. El crecimiento sólido llega en meses, no en días. Lo que garantizamos desde el primer mes es transparencia total: sabrás exactamente qué está pasando y por qué.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q">¿Qué pasa si no funciona?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No trabajamos con modelos que no podamos escalar. Si entramos, es porque vemos potencial real. Y si en algún momento los números no nos acompañan, somos los primeros en decirlo y en ajustar la estrategia.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q">¿Hay permanencia mínima?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Trabajamos con compromisos trimestrales. El crecimiento real necesita tiempo. Si en tres meses no generamos valor demostrable, lo primero lo decimos nosotros.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q">¿Cómo es la sesión de estrategia gratuita?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">45 minutos. Analizamos tu negocio, tus canales actuales y los cuellos de botella que frenan tu crecimiento. No es una llamada de ventas. Te irás con al menos 3 ideas accionables tanto si trabajamos juntos como si no.</div></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════ CTA FINAL ════ -->
+<section class="final-cta" id="cta-final">
+  <div class="final-cta-inner rv">
+    <h2 class="final-cta-h">
+      En 45 minutos<br>
+      <span class="dim">puedes cambiar</span><br>
+      el <span class="blue">rumbo.</span>
+    </h2>
+    <p class="final-cta-sub">O seguir exactamente igual dentro de 6 meses.<br><strong>La decisión es tuya.</strong></p>
+    <a href="#contacto" class="btn-prim" style="font-size:.8rem;padding:1.3rem 3rem;">
+      Quiero escalar mi negocio
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <span class="final-cta-alt">Sin compromiso · Sin letra pequeña · Solo valor real</span>
+  </div>
+</section>
+
+<!-- ════ CONTACTO ════ -->
+<section class="s" id="contacto">
+  <div class="s-num" style="margin-bottom:4rem;">11 — Sesión de estrategia gratuita</div>
+  <div class="contact-layout">
+    <div>
+      <div class="contact-big rv">
+        45 minutos<br>
+        <span class="dim">que pueden</span><br>
+        cambiar<br>
+        <span class="blue">el rumbo.</span>
+      </div>
+      <ul class="contact-perks rv" style="transition-delay:.08s">
+        <li class="cp"><span class="cp-num">01</span>Diagnóstico honesto de tu situación actual</li>
+        <li class="cp"><span class="cp-num">02</span>3 acciones que puedes implementar esta semana</li>
+        <li class="cp"><span class="cp-num">03</span>Sin compromiso, sin ventas, sin letra pequeña</li>
+      </ul>
+      <p class="contact-note rv" style="transition-delay:.16s">Máximo 4 sesiones por semana — plazas limitadas</p>
+    </div>
+    <div class="rv" style="transition-delay:.12s">
+      <form id="contact-form" class="form" novalidate>
+        <div class="form-row">
+          <div class="form-field"><label class="form-label">Nombre</label><input class="form-input" type="text" name="nombre" placeholder="Tu nombre" required /></div>
+          <div class="form-field"><label class="form-label">Empresa</label><input class="form-input" type="text" name="empresa" placeholder="Tu empresa" /></div>
+        </div>
+        <div class="form-field"><label class="form-label">Email</label><input class="form-input" type="email" name="email" placeholder="tu@empresa.com" required /></div>
+        <div class="form-field"><label class="form-label">¿A qué sector perteneces?</label><input class="form-input" type="text" name="sector" placeholder="Catering, inmobiliaria, e-commerce, otro..." /></div>
+        <div class="form-field"><label class="form-label">¿Cuál es tu mayor reto ahora mismo?</label><textarea class="form-textarea" name="reto" rows="3" placeholder="Cuéntanos brevemente..."></textarea></div>
+        <button type="submit" class="form-submit">
+          <span>Quiero mi sesión de estrategia</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-disc">Sin spam. Sin compromiso. Solo valor.</p>
+      </form>
+      <div class="form-success" id="form-success">
+        <div class="form-success-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="var(--blue2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Solicitud recibida</h4>
+        <p>Te contactamos en menos de 24h para confirmar tu sesión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo" style="margin-bottom:1rem;"><span class="logo-text">AXIA <span class="amp">&</span> CO</span></div>
+      <p class="footer-tagline">Growth Partner para negocios que quieren crecer de verdad. Nacidos en TeamLabs.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="footer-social" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" class="footer-social" aria-label="Twitter/X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Servicios</div>
+      <ul class="footer-links">
+        <li><a href="#servicios">Estrategia de Crecimiento</a></li>
+        <li><a href="#servicios">Paid Media</a></li>
+        <li><a href="#servicios">Desarrollo Web</a></li>
+        <li><a href="#servicios">Contenido & Redes</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Empresa</div>
+      <ul class="footer-links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="mailto:hola@axia.co">hola@axia.co</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <ul class="footer-links">
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Aviso legal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Axia & Co. Todos los derechos reservados.</p>
+    <p class="footer-claim">No seguimos reglas, las reinventamos.</p>
+  </div>
+</footer>
+
+<script>
+/* ── Nav ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('stuck', window.scrollY > 60), { passive: true });
+
+/* ── FAQ ── */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  });
+});
+
+/* ── Diferencia hover ── */
+document.querySelectorAll('.diff-item').forEach(row => {
+  row.addEventListener('mouseenter', () => {
+    document.querySelectorAll('.diff-item').forEach(r => r.style.opacity = r === row ? '1' : '.35');
+  });
+  row.addEventListener('mouseleave', () => {
+    document.querySelectorAll('.diff-item').forEach(r => r.style.opacity = '1');
+  });
+});
+
+/* ── Comparativa barras ── */
+(function() {
+  const bars = document.getElementById('compare-bars');
+  if (!bars) return;
+  let fired = false;
+  function animCount(el, target, dur) {
+    const t0 = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - t0) / dur, 1);
+      const e = p < .5 ? 2*p*p : -1+(4-2*p)*p;
+      el.textContent = Math.round(e * target);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting || fired) return;
+    fired = true;
+    animCount(document.getElementById('score-agency'), 26, 1400);
+    animCount(document.getElementById('score-axia'), 94, 1400);
+    document.querySelectorAll('.compare-bar-row').forEach((row, i) => {
+      setTimeout(() => {
+        const maxW = row.querySelector('.cbc-agency .bar-track').offsetWidth;
+        row.style.setProperty('--agency-w', (maxW * +row.dataset.agency / 100) + 'px');
+        row.style.setProperty('--axia-w',   (maxW * +row.dataset.axia   / 100) + 'px');
+        row.classList.add('animated');
+      }, i * 110);
+    });
+  }, { threshold: 0.3 }).observe(bars);
+})();
+
+/* ── Filtro de cliente ── */
+(function() {
+  const checks = document.querySelectorAll('.filter-check');
+  const cta    = document.getElementById('filter-cta');
+  checks.forEach(c => {
+    c.addEventListener('click', () => {
+      c.classList.toggle('checked');
+      const n = document.querySelectorAll('.filter-check.checked').length;
+      cta.classList.toggle('show', n >= 2);
+    });
+  });
+})();
+
+/* ── Form ── */
+document.getElementById('contact-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target;
+  const nombre  = f.nombre.value.trim();
+  const empresa = f.empresa.value.trim();
+  const email   = f.email.value.trim();
+  const sector  = f.sector.value.trim();
+  const reto    = f.reto.value.trim();
+  const subject = 'NUEVO LEAD - ' + nombre + (empresa ? ' - ' + empresa : '');
+  const body = 'Nombre: ' + nombre + '\nEmpresa: ' + empresa + '\nEmail: ' + email + '\nSector: ' + sector + '\n\nReto principal:\n' + reto;
+  window.open('mailto:eric.loaiza@alumni.mondragon.edu?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
+  f.style.display = 'none';
+  document.getElementById('form-success').classList.add('show');
+});
+
+/* ── Reveal on scroll ── */
+new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); } });
+}, { threshold: 0.07 }).observe(document.body);
+
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.07 });
+document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>

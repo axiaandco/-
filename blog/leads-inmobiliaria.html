@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De 0 a 80 leads mensuales en inmobiliaria: el sistema exacto — Axia & Co</title>
+  <meta name="description" content="Caso real: cómo pasamos de 0 a 80 leads cualificados al mes en una agencia inmobiliaria en 90 días. Estrategia completa, canales, presupuesto y resultados." />
+  <link rel="canonical" href="https://axia.co/blog/leads-inmobiliaria.html" />
+  <meta property="og:title" content="De 0 a 80 leads mensuales en inmobiliaria: el sistema exacto" />
+  <meta property="og:description" content="Caso real: 90 días, 3 palancas y un sistema de captación que genera leads predecibles." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" />
+  <meta property="og:type" content="article" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #08091A; --bg2: #0D0E26; --txt: #EFEFEF; --txt2: #5A5B7A; --txt3: #2E2F4A;
+      --blue: #5162E8; --blue2: #6B7CF0; --border: rgba(255,255,255,0.07); --font: 'Inter', sans-serif;
+    }
+    body { background: var(--bg); color: var(--txt); font-family: var(--font); font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(8,9,26,.94); backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo img { height: 34px; }
+    .nav-back {
+      font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--txt2); display: flex; align-items: center; gap: .5rem; transition: color .2s;
+    }
+    .nav-back:hover { color: var(--txt); }
+    .article-hero { padding-top: 100px; height: 60vh; min-height: 420px; position: relative; overflow: hidden; }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.4); }
+    .article-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg) 0%, transparent 60%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 4rem; }
+    .article-cat { font-size: .62rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--blue2); margin-bottom: 1rem; }
+    .article-title { font-size: clamp(1.8rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; max-width: 18ch; }
+    .article-meta { display: flex; align-items: center; gap: 2rem; margin-top: 1.2rem; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt2); }
+    .article-body { max-width: 720px; margin: 0 auto; padding: 5rem 2rem 8rem; }
+    .article-lead { font-size: 1.15rem; font-weight: 400; color: var(--txt); line-height: 1.75; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .article-body h2 { font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; margin: 3rem 0 1.2rem; color: var(--txt); }
+    .article-body h3 { font-size: 1.05rem; font-weight: 600; margin: 2rem 0 .8rem; color: var(--blue2); }
+    .article-body p { font-size: .9rem; color: var(--txt2); line-height: 1.85; margin-bottom: 1.2rem; }
+    .article-body strong { color: var(--txt); font-weight: 600; }
+    .callout { background: var(--bg2); border-left: 3px solid var(--blue); padding: 1.5rem 2rem; margin: 2.5rem 0; font-size: .88rem; color: var(--txt); line-height: 1.7; font-style: italic; }
+    .timeline { list-style: none; margin: 2.5rem 0; }
+    .timeline-item { display: flex; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+    .timeline-item:first-child { border-top: 1px solid var(--border); }
+    .timeline-week { font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--blue2); flex-shrink: 0; padding-top: .2rem; min-width: 80px; }
+    .timeline-content strong { font-size: .88rem; font-weight: 600; color: var(--txt); display: block; margin-bottom: .4rem; }
+    .timeline-content p { font-size: .8rem; color: var(--txt2); line-height: 1.65; margin: 0; }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin: 2.5rem 0; }
+    .stat-box { background: var(--bg2); padding: 1.8rem; }
+    .stat-box .val { font-size: 2rem; font-weight: 200; letter-spacing: -.04em; color: var(--txt); }
+    .stat-box .lbl { font-size: .6rem; letter-spacing: .15em; text-transform: uppercase; color: var(--txt2); margin-top: .3rem; }
+    .article-cta { margin-top: 5rem; padding: 3rem; background: var(--bg2); border: 1px solid rgba(81,98,232,.2); text-align: center; }
+    .article-cta p { font-size: .88rem; color: var(--txt2); margin-bottom: 1.5rem; }
+    .article-cta a { display: inline-flex; align-items: center; gap: .75rem; background: var(--blue); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 1rem 2rem; transition: opacity .2s; }
+    .article-cta a:hover { opacity: .88; }
+    @media (max-width: 768px) {
+      nav { padding: 1.1rem 1.5rem; }
+      .article-hero-content { padding: 2rem 1.5rem; }
+      .article-body { padding: 3rem 1.5rem 5rem; }
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo" style="font-size:.82rem;font-weight:900;letter-spacing:.2em;color:#F2F2F4;">AXIA <span style="color:#5162E8;">&</span> CO</a>
+  <a href="../index.html#blog" class="nav-back">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Volver al blog
+  </a>
+</nav>
+
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&q=85&auto=format&fit=crop" alt="Inmobiliaria" />
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-cat">Caso de estudio · Inmobiliaria</div>
+    <h1 class="article-title">De 0 a 80 leads mensuales en inmobiliaria: el sistema exacto que usamos</h1>
+    <div class="article-meta">
+      <span>Axia & Co</span>
+      <span>12 min lectura</span>
+      <span>Marzo 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p class="article-lead">
+    Una agencia inmobiliaria local con 3 agentes, sin presencia digital real y completamente dependiente del boca a boca. En 90 días pasamos de 0 leads digitales a más de 80 solicitudes mensuales cualificadas. Aquí está el sistema completo, sin filtros.
+  </p>
+
+  <h2>El punto de partida</h2>
+  <p>Cuando llegamos, el negocio tenía una web que no aparecía en Google, ninguna estrategia en redes sociales y un equipo comercial que dependía al 100% de referencias personales. No era un mal negocio — tenía una reputación local sólida y clientes satisfechos. El problema era que esa reputación no se traducía en captación digital.</p>
+  <p>La primera semana hicimos un diagnóstico completo: análisis de la web, del tráfico, de los competidores en la zona y de los canales disponibles. Las conclusiones fueron claras: <strong>el potencial estaba, el sistema de captación no existía.</strong></p>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="val">0</div><div class="lbl">Leads digitales al mes (punto de partida)</div></div>
+    <div class="stat-box"><div class="val">3</div><div class="lbl">Agentes en el equipo</div></div>
+    <div class="stat-box"><div class="val">100%</div><div class="lbl">Dependencia del boca a boca</div></div>
+  </div>
+
+  <h2>La estrategia: 3 palancas en paralelo</h2>
+
+  <h3>Palanca 1 — Google My Business y SEO local</h3>
+  <p>El primer paso fue optimizar la presencia en Google Maps. La ficha de Google My Business estaba incompleta, sin fotos actualizadas y sin respuestas a reseñas. En 3 semanas la optimizamos completamente y pusimos en marcha una estrategia sistemática de captación de reseñas de clientes anteriores.</p>
+  <p>Resultado: en 60 días pasaron del puesto 7 al top 3 en búsquedas locales de "agencia inmobiliaria [ciudad]".</p>
+
+  <h3>Palanca 2 — Campañas de Meta Ads con segmentación por intención</h3>
+  <p>Diseñamos dos embudos diferenciados: uno para captación de vendedores (propietarios con intención de vender) y otro para compradores. La clave estaba en la segmentación: no íbamos a todo el mundo, íbamos a perfiles muy específicos con mensajes muy específicos.</p>
+  <p>El presupuesto inicial fue de 800€/mes. El coste por lead cualificado en la primera semana fue de 22€. En la semana 6, tras optimizar las creatividades y los públicos, bajó a 9,40€.</p>
+
+  <h3>Palanca 3 — Contenido de autoridad local en Instagram</h3>
+  <p>El tercer canal fue construir autoridad de marca en el territorio. Publicamos contenido semanal sobre el mercado inmobiliario local: evolución de precios, zonas con mayor demanda, consejos para vendedores. En 90 días pasaron de 340 a más de 2.100 seguidores y empezaron a recibir mensajes directos de personas interesadas en vender.</p>
+
+  <h2>El sistema en los 90 días: semana a semana</h2>
+  <ul class="timeline">
+    <li class="timeline-item">
+      <span class="timeline-week">Sem. 1–2</span>
+      <div class="timeline-content">
+        <strong>Diagnóstico y configuración base</strong>
+        <p>Auditoría completa, optimización de GMB, setup de píxel de Meta y Google Analytics, creación de landing pages específicas para vendedores y compradores.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <span class="timeline-week">Sem. 3–4</span>
+      <div class="timeline-content">
+        <strong>Lanzamiento de campañas</strong>
+        <p>Primera campaña de Meta Ads activa con 3 creatividades distintas. Primera semana: 18 leads. Coste medio: 22€/lead. Inicio de la estrategia de contenido en Instagram.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <span class="timeline-week">Sem. 5–8</span>
+      <div class="timeline-content">
+        <strong>Optimización y escalado</strong>
+        <p>Análisis de las creatividades con mejor rendimiento, eliminación de las que no funcionan, escalado del presupuesto en los conjuntos ganadores. Coste por lead baja a 12€.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <span class="timeline-week">Sem. 9–12</span>
+      <div class="timeline-content">
+        <strong>Consolidación del sistema</strong>
+        <p>80+ leads mensuales estabilizados. CPL en 9,40€. Top 3 en Google Maps. 2.100 seguidores en Instagram con demanda orgánica activa.</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="callout">
+    El resultado final no fue solo el número de leads. Fue que el negocio pasó de depender del azar a tener un sistema predecible de captación que funciona mientras el equipo trabaja con los clientes actuales.
+  </div>
+
+  <h2>Resultados a los 90 días</h2>
+  <div class="stat-row">
+    <div class="stat-box"><div class="val">80+</div><div class="lbl">Leads cualificados / mes</div></div>
+    <div class="stat-box"><div class="val">9,40€</div><div class="lbl">Coste por lead (CPL final)</div></div>
+    <div class="stat-box"><div class="val">Top 3</div><div class="lbl">Posición en Google Maps local</div></div>
+  </div>
+
+  <h2>Lo que aprendimos</h2>
+  <p>Este caso confirma algo que vemos repetidamente: <strong>el problema de la mayoría de los negocios no es la falta de demanda, es la falta de sistema para capturarla.</strong> La demanda existía. Las personas buscaban una agencia inmobiliaria en esa zona. Simplemente, este negocio no aparecía cuando lo hacían.</p>
+  <p>El sistema que construimos no es mágico ni complejo. Es consistente, medible y optimizable. Eso es lo que lo hace sostenible.</p>
+
+  <div class="article-cta">
+    <p>¿Quieres un sistema de captación como este para tu negocio?</p>
+    <a href="../index.html#contacto">
+      Hablemos de tu caso
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+</div>
+</body>
+</html>
